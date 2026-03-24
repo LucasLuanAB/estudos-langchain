@@ -14,7 +14,7 @@ def add_one(x:int) -> int:
     return x +1
 def mul_two (x:int) -> int:
     return x * 2
-# aqui a baixo eu estou declarando as runnable
+# aqui abaixo eu estou declarando as runnable
 runnable_1 = RunnableLambda(add_one)
 runnable_2 = RunnableLambda(mul_two)
 
@@ -39,7 +39,7 @@ runnable_3 = RunnableLambda(mul_three) # convertendo a função de multiplicaç�
 
 sequence = runnable_1 | {
     "mul_two": runnable_2,
-    "mul_three": runnable_3, # type: ignore
+    "mul_three": runnable_3, 
 }  
 
 reposta = sequence.invoke(1)
